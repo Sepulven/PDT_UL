@@ -1,7 +1,10 @@
 
-
 ## Installation guide
+
+Have in mind that it might take up to one hour to install it, don't close your terminal.
+
 https://geekflare.com/how-to-install-latex-on-ubuntu/
+
 ``` bash
 sudo apt-get update
 
@@ -21,4 +24,13 @@ pdflatex test.tex
 evince test.pdf
 ```
 
+
+## In order to install TexMaker on Ubuntu
+```bash
+sudo apt-get -y install texmaker
+sudo apt-get --fix-broken install
+sudo apt-get -y install texmaker
+```
+
 https://www.xm1math.net/texmaker/download.html
+
