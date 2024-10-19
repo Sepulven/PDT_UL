@@ -2,6 +2,9 @@
 *
 
 #Except for:
+# .gitignore don't let you look inside ignored folder, thus the next line
+!*/ 
+
 !*.tex
 !README.md
 !Makefile

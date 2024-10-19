@@ -1,0 +1,1 @@
+#find . -type f | grep -v "pattern_to_exclude" | xargs rm

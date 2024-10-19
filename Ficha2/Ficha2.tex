@@ -4,17 +4,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage[normalem]{ulem}
 \usepackage{xcolor}
+\usepackage{colortbl} %So we can paint the background of the first row
 
 \title{A vida do Suricata}
 \author{Arthur Aguiar}
-\date {\today}
+\date{\today}
 \begin{document}
 \maketitle
 
 \chapter{Introdução}
 
 \section{Sobre o Suricata}
-	O \textbf{suricata}, também chamado de  \textbf{suricato} ou \
+	O \textbf{suricata}, também chamado de \textbf{suricato} ou \
 	\textbf{suricate} \textit{(\textbf{Suricata} su-\
 	ricatta)} é um pequeno mamífero da família \textit{Herpestidae}, nativo do\
 	deserto do Kalahari. Estes animais têm cerca de meio metro de com-\
@@ -59,16 +60,16 @@
 	\begin{enumerate}
 		\item Parque “Kgalagadi”,\textit{África do Sul / Botswana}
 		\item Parque nacional “Karoo”, \textit{África do Sul}
-		\item Reserva do vale m´agico do Suricata, \textit{África do Sul}
+		\item Reserva do vale mágico do Suricata, \textit{África do Sul}
 		\item Parque nacional Iona, \textit{Angola}
 	\end{enumerate}
 
 ou
 
 	\begin{description}
-		\item[parque1] Parque “Kgalagadi”,\textit{África do Sul / Botswana}
+		\item[parque1] Parque “Kgalagadi”, \textit{África do Sul / Botswana}
 		\item[parque2] Parque nacional “Karoo”, \textit{África do Sul}
-		\item[parque3] Reserva do vale m´agico do Suricata, \textit{África do Sul}
+		\item[parque3] Reserva do vale mágico do Suricata, \textit{África do Sul}
 		\item[parque4] Parque nacional Iona, \textit{Angola}
 	\end{description}
 
@@ -86,18 +87,19 @@ ou
 	\textit{Os indivíduos de cada subspécie apresentam características \
 	distintas como se pode ver na tabela e na figura seguintes.}
 
-
 	\begin{table}[]
-	\caption{Caracteristicas diferenciadoras entre subespécies de Suricata}
-
-	\begin{tabular}{|l || c | c | c |c|} \hline
-		& siricata & iona & majoriae \\ \hline
-		côr do pelo & beje amarelado & castanho amarelado  & castanho escuro \\ \hline
-		tamanho & 29 cm & 25 cm & 34 cm \\ \hline
-		peso & 731g & 698g  & 799g \\ \hline
-	\end{tabular}
-	\end {table}
-
-
+		\begin{tabular}{|c|l|l|l|}
+			\hline 
+			\rowcolor{gray!40}
+			\multicolumn{1}{|l|}{} &
+			\multicolumn{1}{c|}{\textbf{siricata}} &
+			\multicolumn{1}{c|}{\textbf{iona}} &
+			\multicolumn{1}{c|}{\textbf{majoriae}} \\ \hline
+			\textbf{côr do pelo} & beje amarelado & castanho amarelado & castanho escuro \\ \hline
+			\textbf{tamanho}     & 29 cm          & 25 cm              & 34 cm           \\ \hline
+			\textbf{peso}        & 731g           & 698g               & 799g            \\ \hline
+		\end{tabular}
+		\caption{Tabela com a primeira linha colorida}
+	\end{table}
 
 \end{document}
