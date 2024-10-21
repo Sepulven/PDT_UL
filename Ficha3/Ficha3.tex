@@ -1,20 +1,76 @@
-\documentclass[11pt, a4paper]{report}
-\usepackage{asmftons}
-\author{Arthur Aguiar}
+\documentclass[a4paper,11pt]{report}
+
+\usepackage[portuguese]{babel}
+
+
 \title{A série TV Guerra dos Tronos}
+\author{Arthur Aguiar}
 \date{}
+
+% 1. Note:
+
+% In order for the label and reference to work we need to compile the .tex
+% file twice.
+
+% 2. Note:
+
+% In order for the right positioning to work with table we must add the 
+% [htbp] property.
+
+
 \begin{document}
+
+%Display the title in the first page
 \maketitle
-\chapter{Introdução}
-\section{Sobre a Série}
-
-A {\huge Guerra dos Tronos} é uma superprodução Televisiva da HBO,
- baseada na saga literária de George R.R. Martin, é uma série
- que {\tiny redefine os parâmetros do que é possível fazer em televisão.}
-
-\textit{Uma narrativa épica que atravessa mundos imaginários e personagens a perder de vista}
 
 
-Este texto não devia estar aqui / § " % $ & ^  ~
+	\chapter{Introdução}
+	\section{Sobre a Série}
+	\label{intro}
 
-A secção xx falou-nos sobre a série e agora na secção XX vamos falar sobre o elenco. tabela XX mostra-nos as personagens principais.
+		A {\Huge Guerra dos Tronos}\footnote{Este nome é uma marca registada.} 
+		é uma superprodução Televisiva da HBO,
+		baseada na saga literária de George R.R. Martin, é uma série
+		que {\tiny redefine os parâmetros do que é possível fazer em televisão.}
+
+		\vspace{1cm} % Vertical spacing
+
+		\textit{Uma narrativa épica que} {\huge atravessa mundos imaginários}
+
+		\vspace{-0.5cm} % We need to fix the spacing that is affected by the the previous vspace
+
+		\begin{center}
+			e personagens a perder de vista
+			\footnote{Texto retirado de http://tv.sapo.pt/series/a-guerra-dos-tronos.}.
+		\end{center}
+
+		\vspace{1cm} % Vertical spacing
+
+		% {} empty braces encloses empty groups, ^ and ~ are treated 
+		{\tt UPS!Este texto não devia estar aqui / \S \" \% \$ \& \^{} \~{}}
+
+		\section{Elenco}
+		\label{elenco}
+
+		A secção \ref{intro} falou-nos sobre a série e agora na secção \ref{elenco} vamos falar sobre
+		o elenco. A tabela \ref{intro} mostra-nos as personagens principais.
+
+\begin{table}[htbp] % htbp helps latex with placing the table.
+	\centering
+	\begin{tabular}{|l|c|r|} % Last column alignment is to the left
+		\hline % Top border
+		\textbf{Ator/Atriz} & \textbf{Personagem}  & \textbf{Temporada} \\
+		\hline %Horizontal border
+		Peter Dinklage      & Tyrion Lannister   & 1, 2 e 3  \\
+		\hline %Horizontal border
+		Emilia Clarke       & Daenerys Targaryen & 1, 2 e 3  \\
+		\hline %Horizontal border
+		Richard Madden      & Robb Stark         & 1 e 2     \\
+		\hline %Bottom border
+	\end{tabular}
+
+	\caption{Principais personagens da “Guerra dos Tronos” ao longo das
+	várias temporadas.}
+\end{table}
+
+\end{document}
