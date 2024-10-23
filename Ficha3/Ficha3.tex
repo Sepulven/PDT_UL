@@ -2,7 +2,7 @@
 
 \usepackage[portuguese]{babel}
 \usepackage{graphicx}
-
+\usepackage{titlepic}
 
 
 % 1. Note:
@@ -14,19 +14,16 @@
 
 % In order for the right positioning to work with table we must add the 
 % [htbp] property.
+\author{Arthur Aguiar}
+\title{A série TV Guerra dos Tronos}
+\titlepic{
+	\includegraphics[width=12cm]{./game-of-thrones.jpg}
+}
 
 \begin{document}
 
 %Display the title in the first page
-
-	\begin{titlepage}
-		\centering
-		{\Large A série TV Guerra dos Tronos} \\ [1cm]
-		{\large Arthur Aguiar} \\ [1cm]
-		\includegraphics[width=12cm]{./game-of-thrones.jpg}
-	\end{titlepage}
-
-
+\maketitle
 	\chapter{Introdução}
 	\section{Sobre a Série}
 	\label{intro}
