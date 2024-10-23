@@ -1,0 +1,208 @@
+\documentclass[a4paper, 11pt]{report}
+
+\usepackage[portuguese]{babel}
+\usepackage{multirow}
+
+\title{Aula de Dúvidas de Produção de Relátorios}
+\author{Arthur Aguiar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\chapter{}
+
+\section{Tabela sem linhas}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l c r}
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+\section{Tabela com uma linha}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ l | c r }
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+
+\section{Tabela com duas linhas}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ l | c | r}
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+
+
+%  Tres primeiras tabelas
+
+\section{Tabela com duas linhas a esquerda}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ |l | c  r}
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+\section{Tabela com quatro linhas}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | l | c|  r|}
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+\section{Tabela com quatro linhas verticais e uma Horizontal}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | l | c|  r|}
+		\hline
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+\section{Tabela com duas linhas verticais e duas linhas horizontais}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | l | c|  r|}
+		\hline
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		\hline
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+
+\section{Tabela com duas linhas verticais e duas linhas horizontais}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | c| c|  c|}
+		\hline
+		1      & 2        & 3      \\
+		4      & 5        & 6      \\
+		\hline
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+\section{Tabela com duas linhas verticais e duas linhas horizontais centrada}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | c | c |  c|}
+		\hline
+		1      & 2        & 3      \\
+		\hline
+		4      & 5        & 6      \\
+		\hline
+		grande & enorme   & gigante \\
+	\end{tabular}
+\end{table}
+
+\section{Tabela com duas linhas verticais e tres linhas horizontais centrada}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | c | c |  c|}
+		\hline
+		1      & 2        & 3      \\
+		\hline
+		4      & 5        & 6      \\
+		\hline
+		grande & enorme   & gigante \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\section{Legenda em cima}
+
+\begin{table}[h!]
+	\centering
+	\caption{legenda}
+	\begin{tabular}{ | c | c |  c|}
+		\hline
+		1      & 2        & 3      \\
+		\hline
+		4      & 5        & 6      \\
+		\hline
+		grande & enorme   & gigante \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\section{Legenda em baixo}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | c | c |  c|}
+		\hline
+		1      & 2        & 3      \\
+		\hline
+		4      & 5        & 6      \\
+		\hline
+		grande & enorme   & gigante \\
+		\hline
+	\end{tabular}
+	\caption{legenda}
+\end{table}
+
+
+\section{Colunas unidas}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | c | c |  c|}
+		\hline
+		\multicolumn{3}{ | c | }{Coluna unida} \\
+		\hline
+		1      & 2        & 3      \\
+		\hline
+		4      & 5        & 6      \\
+		\hline
+		grande & enorme   & gigante \\
+		\hline
+	\end{tabular}
+	\caption{legenda}
+\end{table}
+
+\newpage
+
+\section{Linhas unidas}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ |c | c | c |  c|}
+		\hline
+		\multirow{3}{*}{Linhas Unidas}
+		& 1      & 2        & 3      \\
+		& 4      & 5        & 6      \\
+		& grande & enorme   & gigante \\ \hline
+	\end{tabular}
+\end{table}
+
+\end{document}
