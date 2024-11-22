@@ -9,3 +9,6 @@
 !README.md
 !Makefile
 !.gitignore
+!*.jpg
+!*.jpeg
+!*.png
