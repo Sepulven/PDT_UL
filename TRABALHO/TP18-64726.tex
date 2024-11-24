@@ -19,6 +19,12 @@
 \usepackage{hyperref}
 \usepackage{xurl}  % * Quebra a url de forma inteligente
 
+\usepackage{booktabs, multirow} % * Para bordas das tabelas
+\usepackage{soul}% * Para o sublinhado
+\usepackage{xcolor,colortbl} % * Cores nas células
+\usepackage{changepage,threeparttable} % * Tabelas largas.
+
+
 % *O Documento tem de ter margens superior e inferior de 1.5 cm e margens
 % *   esquerda e direita de 1 cm;
 \geometry{a4paper, left= 1 cm, right= 1 cm, top= 1.5 cm, bottom= 1.5 cm }
@@ -47,6 +53,8 @@
 
 % * Imagem relativa ao tema
 \titlepic{
+	% * Roxo escuro -> #6658fe
+	% * Roxo Claro -> #e1ddfe
 	\includegraphics[width=12cm]{./first_page.jpg}
 }
 
@@ -61,6 +69,8 @@
 	%  * Índices
 	\tableofcontents % * faz o índice
 
+	% * Depois de toda a informação que consultou, em duas colunas, diga-nos
+	% * o que descobriu com esta pesquisa, se acha vantajoso fazer e manter um orçamento atualizado.
 	% * um texto com o máximo de uma página sobre finanças pessoais.
 	\chapter{Introdução}
 		\begin{multicols}{2}
@@ -90,7 +100,7 @@
 				indivíduo, afetando a sociedade como um todo. Um bom planejamento das finanças tem efeitos que se estendem \
 				por várias gerações. Concluo que, de facto, a gestão das finanças pessoais é vantajosa.
 		\end{multicols}
-	
+
 		\vskip 0.5cm
 
 		\begin{multicols}{2}
@@ -109,16 +119,134 @@
 				\Large \textbf{- Alan Greenspan \cite{intro:bibliografia}}
 			\end{center}
 		\end{multicols}
+
+		\chapter{Gestão de Finanças Pessoais}
+			\begin{minipage}{\textwidth}
+				\hspace{1cm} Neste caso de estudo temos um estudante universitário, com idade inferior a 23 anos \
+				de idade e do sexo masculino, que possui família em uma cidade vizinha. O estudante reside em um quarto \
+				compartilhado com um colega, e possui uma dieta a base de vegetais e proteínas, refeições planejadas e \
+				almoça na cantina da faculdade.  Sempre possui medicamentos de reserva para pequenos problemas de saúde, 
+				vai ao dentista uma vez ao ano. Possui o passe gratuito sub 23 e visita a sua família uma vez ao mês. 
+			\end{minipage}
+
+		% ** Planeamento das finanças pessoais
+		% ***********************************
+		\begin{table}[!htp]\centering
+
+			\scriptsize
+			\begin{tabular}{lrrrrrrrr}\toprule
+				PLANEAMENTO &Setembro &Outubro &Novembro &Dezembro &Janeiro &Fevereiro &TOTAL \\\midrule
+				Salário &820.00€ &820.00€ &820.00€ &820.00€ &820.00€ &820.00€ &\cellcolor[HTML]{4285f4}4,920.00€ \\
+				\cellcolor[HTML]{4285f4}RENDIMENTOS &\cellcolor[HTML]{4285f4}729.80€ &\cellcolor[HTML]{4285f4}729.80€ &\cellcolor[HTML]{4285f4}729.80€ &\cellcolor[HTML]{4285f4}729.80€ &\cellcolor[HTML]{4285f4}729.80€ &\cellcolor[HTML]{4285f4}729.80€ &\cellcolor[HTML]{4285f4}4,378.80€ \\
+				& & & & & & & \\
+				\cellcolor[HTML]{4285f4}HABITAÇÃO &\cellcolor[HTML]{4285f4}380.00€ &\cellcolor[HTML]{4285f4}380.00€ &\cellcolor[HTML]{4285f4}380.00€ &\cellcolor[HTML]{4285f4}380.00€ &\cellcolor[HTML]{4285f4}380.00€ &\cellcolor[HTML]{4285f4}380.00€ &\cellcolor[HTML]{4285f4}2,280.00€ \\
+				Aluguer &250.00€ &250.00€ &250.00€ &250.00€ &250.00€ &250.00€ &\cellcolor[HTML]{4285f4}1,500.00€ \\
+				Supermercado &100.00€ &100.00€ &100.00€ &100.00€ &100.00€ &100.00€ &\cellcolor[HTML]{4285f4}600.00€ \\
+				Alimentação &30.00€ &30.00€ &30.00€ &30.00€ &30.00€ &30.00€ &\cellcolor[HTML]{4285f4}180.00€ \\
+				& & & & & & & \\
+				\cellcolor[HTML]{4285f4}SAÚDE &\cellcolor[HTML]{4285f4}60.00€ &\cellcolor[HTML]{4285f4}20.00€ &\cellcolor[HTML]{4285f4}20.00€ &\cellcolor[HTML]{4285f4}20.00€ &\cellcolor[HTML]{4285f4}20.00€ &\cellcolor[HTML]{4285f4}10.00€ &\cellcolor[HTML]{4285f4}150.00€ \\
+				Médicos &50.00€ & & & & & &\cellcolor[HTML]{4285f4}50.00€ \\
+				Medicamentos &10.00€ &20.00€ &20.00€ &20.00€ &20.00€ &10.00€ &\cellcolor[HTML]{4285f4}100.00€ \\
+				& & & & & & & \\
+				\cellcolor[HTML]{4285f4}TRANSPORTES &\cellcolor[HTML]{4285f4}10.00€ &\cellcolor[HTML]{4285f4}10.00€ &\cellcolor[HTML]{4285f4}30.00€ &\cellcolor[HTML]{4285f4}10.00€ &\cellcolor[HTML]{4285f4}10.00€ &\cellcolor[HTML]{4285f4}10.00€ &\cellcolor[HTML]{4285f4}80.00€ \\
+				Passe & & & & & & &\cellcolor[HTML]{4285f4}0.00€ \\
+				Camioneta &10.00€ &10.00€ &10.00€ &10.00€ &10.00€ &10.00€ &\cellcolor[HTML]{4285f4}60.00€ \\
+				Comboio & & &20.00€ & & & &\cellcolor[HTML]{4285f4}20.00€ \\
+				& & & & & & & \\
+				\cellcolor[HTML]{4285f4}DESPESAS PESSOAIS &\cellcolor[HTML]{4285f4}28.00€ &\cellcolor[HTML]{4285f4}58.00€ &\cellcolor[HTML]{4285f4}58.00€ &\cellcolor[HTML]{4285f4}58.00€ &\cellcolor[HTML]{4285f4}28.00€ &\cellcolor[HTML]{4285f4}28.00€ &\cellcolor[HTML]{4285f4}258.00€ \\
+				Higiene Pessoal &13.00€ &13.00€ &13.00€ &13.00€ &13.00€ &13.00€ &\cellcolor[HTML]{4285f4}78.00€ \\
+				Vestuário & &30.00€ &30.00€ &30.00€ & & &\cellcolor[HTML]{4285f4}90.00€ \\
+				Telemóvel, Internet &15.00€ &15.00€ &15.00€ &15.00€ &15.00€ &15.00€ &\cellcolor[HTML]{4285f4}90.00€ \\
+				& & & & & & & \\
+				\cellcolor[HTML]{4285f4}LAZER &\cellcolor[HTML]{4285f4}22.00€ &\cellcolor[HTML]{4285f4}7.00€ &\cellcolor[HTML]{4285f4}24.00€ &\cellcolor[HTML]{4285f4}27.00€ &\cellcolor[HTML]{4285f4}7.00€ &\cellcolor[HTML]{4285f4}7.00€ &\cellcolor[HTML]{4285f4}94.00€ \\
+				Restaurantes &15.00€ & &10.00€ &20.00€ & & &\cellcolor[HTML]{4285f4}45.00€ \\
+				Bares & & & & & & &\cellcolor[HTML]{4285f4}0.00€ \\
+				Cinema &7.00€ &7.00€ &14.00€ &7.00€ &7.00€ &7.00€ &\cellcolor[HTML]{4285f4}49.00€ \\
+				& & & & & & & \\
+				\cellcolor[HTML]{4285f4}ENSINO &\cellcolor[HTML]{4285f4}187.00€ &\cellcolor[HTML]{4285f4}75.00€ &\cellcolor[HTML]{4285f4}75.00€ &\cellcolor[HTML]{4285f4}75.00€ &\cellcolor[HTML]{4285f4}75.00€ &\cellcolor[HTML]{4285f4}75.00€ &\cellcolor[HTML]{4285f4}562.00€ \\
+				Propinas e Taxas &157.00€ &60.00€ &60.00€ &60.00€ &60.00€ &60.00€ &\cellcolor[HTML]{4285f4}457.00€ \\
+				Material Escolar &30.00€ &15.00€ &15.00€ &15.00€ &15.00€ &15.00€ &\cellcolor[HTML]{4285f4}105.00€ \\
+				Livros &40.00€ &8.00€ &10.00€ &15.00€ & & &\cellcolor[HTML]{4285f4}73.00€ \\
+				& & & & & & & \\
+				\cellcolor[HTML]{4285f4}EXTRAS &\cellcolor[HTML]{4285f4}- &\cellcolor[HTML]{4285f4}- &\cellcolor[HTML]{4285f4}- &\cellcolor[HTML]{4285f4}30.00€ &\cellcolor[HTML]{4285f4}- &\cellcolor[HTML]{4285f4}- &\cellcolor[HTML]{4285f4}30.00€ \\
+				& & & &30.00€ & & &\cellcolor[HTML]{4285f4}30.00€ \\
+				\bottomrule
+			\end{tabular}
+			\caption{Planeamento das finanças pessoais.}\label{tab:planeamento }
+		\end{table}
+		% ***********************************
 		
-	% * Insira também uma citação relativa ao tema.
+		\begin{center}
+			\begin{table}[!h]\centering
+				\scriptsize
+				\begin{tabular}{lrr}\toprule
+					As Contas &TOTAL \\\midrule
+					Rendimentos & 4,378.80€ \\
+					Habitação & 2,280.00€ \\
+					Saúde & 150.00€ \\
+					Transportes & 80.00€ \\
+					Despesas Pessoais & 258.00€ \\
+					Lazer & 94.00€ \\
+					Ensino & 562.00€ \\
+					Extras & 30.00€ \\
+					\bottomrule
+				\end{tabular}
+				\caption{Contas}\label{tab:contas}
+			\end{table}
+			% * Resumo do planeamento das finanças pessoais.
+			% ***********************************
+			\begin{table}[!h]\centering
+				\scriptsize
+				\begin{tabular}{lrrrrrrrr}\toprule
+					RESUMO &Setembro &Outubro &Novembro &Dezembro &Janeiro &Fevereiro &TOTAL \\\midrule
+					\cellcolor[HTML]{4285f4}Rendimentos &729.80€ &729.80€ &729.80€ &729.80€ &729.80€ &729.80€ &\cellcolor[HTML]{4285f4}4,378.80€ \\
+					\cellcolor[HTML]{4285f4}Gastos &687.00€ &550.00€ &587.00€ &600.00€ &520.00€ &510.00€ &\cellcolor[HTML]{4285f4}3,454.00€ \\
+					\cellcolor[HTML]{4285f4}Saldo do Mês &42.80€ &179.80€ &142.80€ &129.80€ &209.80€ &219.80€ &\cellcolor[HTML]{4285f4}924.80€ \\
+					\cellcolor[HTML]{4285f4}Saldo Acumulado &42.80€ &222.60€ &365.40€ &495.20€ &705.00€ &924.80€ &\cellcolor[HTML]{4285f4}924.80€ \\
+					\bottomrule
+				\end{tabular}
+				\caption{Resumo das finanças pessoais}\label{tab:resumo }
+			\end{table}
+			% ***********************************
+			\begin{figure}[h]
+				\begin{center}
+					\includegraphics[width=10cm]{./rendimentos_gastos_grafico_barra.png}
+					\caption{Rendimentos vs Gastos}\label{fig:barra}
+					\includegraphics[width=10cm]{./despesas_percentagem.png}
+					\caption{Despesas percentagem}\label{fig:circular}
+				\end{center}
+			\end{figure}
+			
+		\end{center}
 
-	% * A consulta bibliográfica relativa ao tema e a citação são obrigatórias.
 
-
-	% * Depois de toda a informação que consultou, em duas colunas, diga-nos
-	% * o que descobriu com esta pesquisa, se acha vantajoso fazer e manter um orçamento atualizado.
+		\chapter{Conclusão}
+		\begin{minipage}{\textwidth}
+			\hspace{1cm} Por meio deste caso de estudo, conseguimos visualizar na tabela de planejamento ~\ref{tab:planeamento } a projecção dos \
+			gastos e rendimentos do estudante do mês de Setembro ao mês de Fevereiro. O total resumido do que foi ganho e \
+			o que foi gasto respectivamente em cada um dos custos típicos das despesas pessoais de um indivíduo é \
+			representado pela tabela de contas ~\ref{tab:contas}. 
+			A proporção das suas despesas com os seus ganhos por meio do gráfico Rendimentos vs Gastos~\ref{fig:barra}.
+		\end{minipage}
+		\begin{minipage}{\textwidth}
+			\hspace{1cm} O gráfico circular ~\ref{fig:circular} representa as despesas pessoais em percentagem, conseguimos notas que mais de \
+			80\% das despesas são relacionadas à habitação e ensino. Custo esse extremamente lógico, se contextualizarmos \
+			com o estágio atual da sua vida.
+		\end{minipage}
+		\begin{minipage}{\textwidth}
+			\hspace{1cm} O planejamento das finanças pessoais é sempre uma projecção, e cabe ao indivíduo segui-lo ou não.
+			\vskip 0.01cm
+		\end{minipage}
+		\begin{minipage}{\textwidth}
+			\hspace{1cm} Portanto, caso o estudante universitário consiga cumprir com o planejamento, terá uma vantagem econômica \
+			com essa gestão das finanças pessoais. Conseguimos notar o resumo do seu saldo acumulado por meio da tabela de resumos ~\ref{fig:barra}, \
+			concluímos que o mesmo consegue salvar em 6 meses até \textbf{924,80€}. Assim sendo, conseguimos provar a vantagem do \
+			planeamento das finanças pessoais.
+		\end{minipage}
 
 	\begin{thebibliography}{99}
+
+		% * A consulta bibliográfica relativa ao tema e a citação são obrigatórias.
 		\bibitem{intro:intro}
 			\textbf{Associação de politécnicos do norte:}
 				\url{https://bibliotecadigital.ipb.pt/bitstream/10198/24948/1/Catarina%20Marinho.pdf} \\
