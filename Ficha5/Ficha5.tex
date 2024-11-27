@@ -6,7 +6,14 @@
 
 % hyper links -> hyperref latex
 % Exercicio para treinar para o teste.
+\usepackage{graphicx}
 
+\usepackage{geometry}
+
+\geometry{a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+
+\usepackage{multicol}
+\usepackage{multirow}
 
 \begin{document}
 	\section{A Descoberta dos seres Peixes}
@@ -72,6 +79,44 @@ Brânquias               & Sem Opérculo            & Com Opérculo \\
 
 	\section{Valor Nutricional do Peixe}
 
+	% \begin{table}{h!}
+	% 	\centering
+	% 	\caption{Valor Nutricional do Peixe}
+	% 	\begin{tabular}{|ll|c|}
+	% 		\hline
+	% 		\multicolumn{2}{c}{Peixes}  & & Qtd. a ser ingerida \\
+	% 		\multirow{2}{*}{Atum}        & enlatado                 & 340gr \\ \hline
+	% 		                             & fresco                   & 71-340gr \\ \hline
+	% 		\multirow{3}{*}{Salmão}      & rosa                     & 71gr    \\ \hline
+	% 		                             & do Atlântico (cultivado) & 42.5 - 71gr \\ \hline
+	% 		                             & do Atlântico (selvagem)  & 57 - 99 gr \\ \hline
+	% 	\end{tabular}
+	% \end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|l|l|c|}
+		\hline
+		\multicolumn{2}{|c}{\textbf{Peixes}}& \textbf{Qtd. a ser ingerida} \\ \hline
+		\multirow{3}{*}{Atum}               & enlatado                           & 340 gr                       \\ \cline{2-3} 
+							                & fresco                             & 71-340 gr                    \\ \cline{2-3} 
+							                & rosa                               & 71 gr                        \\ \hline
+		\multirow{2}{*}{Salmão}             & do Atlântico (cultivado)           & 42.5 - 71 gr                 \\ \cline{2-3} 
+							                & do Atlântico (selvagem)            & 57 - 99 gr                   \\ \hline
+		\end{tabular}
+		\caption{Valor Nutricional do Peixe}
+		\label{tab:valor_nutricional_peixe}
+	\end{table}
+
+	\vskip 5cm
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{./Robalo.png}
+		\caption{Um Robalo}
+	\end{figure}
+
+	\newpage
 	\tableofcontents
 	\listoffigures
 	\listoftables
